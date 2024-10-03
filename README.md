@@ -3,13 +3,24 @@
 ### Requisitos
 - [Miro: Surveys Project](https://miro.com/app/board/uXjVLX7sp2I=/?share_link_id=488501560439)
 
+### Download do projeto
+- `git clone git@github.com:rafaelassacconi/django-project.git` - clona o repositório
+- `cd django-project` - entra na pasta do projeto
+- `python -m venv .venv` - cria virtualenv
+- `source .venv/bin/activate` ou `.\.venv\Scripts\activate` - ativa virtualenv
+- `pip install Django` - instala Django
+- `cd womakers` - entra na pasta do sistema
+- `python manage.py migrate` - executa migrações
+- `python manage.py createsuperuser` - cria usuário do admin
+- `python manage.py runserver` - executa aplicação
+
 ### Comandos
 
 #### Criação do projeto
 - `mkdir django-project` - cria pasta do projeto
 - `cd django-project` - entra na pasta do projeto
 - `python -m venv .venv` - cria virtualenv
-- `source .venv/bin/activate` - ativa virtualenv
+- `source .venv/bin/activate` ou `.\.venv\Scripts\activate` - ativa virtualenv
 - `pip install Django` - instala Django
 
 #### Criação da aplicação

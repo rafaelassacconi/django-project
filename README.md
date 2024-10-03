@@ -4,7 +4,7 @@
 - [Miro: Surveys Project](https://miro.com/app/board/uXjVLX7sp2I=/?share_link_id=488501560439)
 
 ### Download do projeto
-- `git clone git@github.com:rafaelassacconi/django-project.git` - clona o repositório
+- `git clone https://github.com/rafaelassacconi/django-project.git` - clona o repositório
 - `cd django-project` - entra na pasta do projeto
 - `python -m venv .venv` - cria virtualenv
 - `source .venv/bin/activate` ou `.\.venv\Scripts\activate` - ativa virtualenv

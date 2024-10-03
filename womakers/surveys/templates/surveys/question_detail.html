@@ -1,0 +1,15 @@
+<h1>{{ question.text }}</h1>
+
+<form method="post" action="{% url 'question-vote' question.id %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Votar</button>
+</form>
+
+<h3>Resultados</h3>
+
+<ul>
+    {% for option in question.option_set.all %}
+        <li>{{ option.text }}: {{ option.vote_set.count }} votos</li>
+    {% endfor %}
+</ul>

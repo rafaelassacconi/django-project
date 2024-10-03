@@ -1,0 +1,9 @@
+<h2>Pesquisas</h2>
+
+<ul>
+    {% for question in object_list %}
+        <li><a href="{% url 'question-detail' question.id %}">{{ question.text }}</a></li>
+    {% empty %}
+        <li>Não tem nenhuma pesquisa disponível no momento.</li>
+    {% endfor %}
+</ul>

@@ -38,6 +38,8 @@
 - `python manage.py createsuperuser` - cria usuário do admin
 - `python manage.py --help` - ver opções de comandos
 - `python manage.py shell` - executa o console
+- `python manage.py test` - executa os testes
+- `python manage.py test surveys.tests.test_models.QuestionTestCase` - executa um teste específico
 
 ### Documentações
 
@@ -66,10 +68,23 @@
 
 #### Templates
 - [Templates examples](https://docs.djangoproject.com/en/5.1/ref/templates/language/)
-- [Base template example](https://www.w3schools.com/django/django_add_bootstrap5.php)
+- [Template tags](https://docs.djangoproject.com/en/5.1/ref/templates/language/#tags)
+
+#### Testes
+- [Django Test example](https://docs.djangoproject.com/en/5.1/topics/testing/overview/)
+- [Comandos para executar testes](https://docs.djangoproject.com/en/5.1/topics/testing/overview/#running-tests)
+- [Assertions](https://docs.djangoproject.com/en/5.1/topics/testing/tools/#assertions)
+- [unittest Example](https://docs.python.org/3/library/unittest.html#basic-example)
 
 #### Bootstrap
 - [django-bootstrap5](https://pypi.org/project/django-bootstrap5/)
+- [Base template exmaple](https://www.w3schools.com/django/django_add_bootstrap5.php)
 - [List group](https://getbootstrap.com/docs/5.0/components/list-group/)
+- [Cards](https://getbootstrap.com/docs/5.0/components/card/)
 - [Buttons](https://getbootstrap.com/docs/5.0/components/buttons/)
+- [Spacing](https://getbootstrap.com/docs/5.0/utilities/spacing/)
 - [Alerts](https://getbootstrap.com/docs/5.0/components/alerts/)
+
+#### CharJS
+- [Getting Started](https://www.chartjs.org/docs/latest/getting-started/)
+- [Pie Charts](https://www.chartjs.org/docs/latest/charts/doughnut.html#pie)

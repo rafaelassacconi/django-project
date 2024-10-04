@@ -4,8 +4,8 @@ from django.urls import reverse
 
 class QuestionListViewTest(TestCase):
     def setUp(self):
-        self.question1 = Question.objects.create(text="Pergunta 1")
-        self.question2 = Question.objects.create(text="Pergunta 2")
+        Question.objects.create(text="Pergunta 1")
+        Question.objects.create(text="Pergunta 2")
         self.question3_disabled = Question.objects.create(text="Pergunta 3", enabled=False)
 
     def test_view_url_accessible_by_path(self):

@@ -21,6 +21,17 @@ class QuestionDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         question = context['question']
         context['form'] = QuestionForm(question=question)
+
+        chart_labels = []
+        chart_numbers = []
+
+        for option in question.option_set.all():
+            chart_labels.append(option.text)
+            chart_numbers.append(option.vote_set.count())
+
+        context['chart_labels'] = chart_labels
+        context['chart_numbers'] = chart_numbers
+        
         return context
 
 class VoteCreateView(CreateView):

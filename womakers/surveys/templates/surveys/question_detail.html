@@ -24,14 +24,50 @@
             <div class="card">
                 <div class="card-body">
                     <h3>Resultados</h3>
+
+                    <p>Total: {{ question.total_votes }} respostas</p>
+                    
+                    {% comment %}
                     <ul>
                         {% for option in question.option_set.all %}
                             <li>{{ option.text }}: {{ option.vote_set.count }} votos</li>
                         {% endfor %}
                     </ul>
+                    {% endcomment %}
+
+                    {% if question.total_votes %}
+                        <div class="d-flex justify-content-center">
+                            <canvas id="myChart" class="w-50 h-50"></canvas>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
 </div>
+
+<!-- chartjs.org -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx = document.getElementById('myChart');
+
+    const data = {
+        labels: {{ chart_labels|safe }},
+        datasets: [{
+            label: 'Votos',
+            data: {{ chart_numbers }},
+            backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 205, 86)'
+            ],
+            }]
+    };
+
+    new Chart(ctx, {
+      type: 'pie',
+      data: data,
+    });
+  </script>
 
 {% endblock %}

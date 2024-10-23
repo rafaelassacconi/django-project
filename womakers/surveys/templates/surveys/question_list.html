@@ -1,8 +1,15 @@
 
 {% extends "surveys/base.html" %}
+{% load user_permissions %}
 
 {% block content %}
     <h2>Pesquisas</h2>
+
+    <h3>User Property > É editor? {{ user.is_editor }}</h3>
+    <h3>Template tag > É editor? {{ user|is_editor }}</h3>
+    
+    <h3>Template tag > É autor? {{ user|is_author }}</h3>
+    <h3>User Property > É autor? {{ user.is_author }}</h3>
 
     <ul class="list-group mt-3">
         {% for question in object_list %}

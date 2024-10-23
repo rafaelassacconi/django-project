@@ -4,6 +4,17 @@
 # - DateField: https://docs.djangoproject.com/en/5.1/ref/models/fields/#datefield
 
 from django.db import models
+from django.contrib.auth.models import AbstractUser
+
+class CustomUser(AbstractUser):
+
+    @property
+    def is_editor(self):
+        return self.groups.filter(name='Editor').exists()
+
+    @property
+    def is_author(self):
+        return self.groups.filter(name='Autor').exists()
 
 class Question(models.Model):
     text = models.CharField(max_length=200)

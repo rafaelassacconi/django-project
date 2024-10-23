@@ -7,7 +7,7 @@
 # - list_display: https://docs.djangoproject.com/en/5.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display
 
 from django.contrib import admin
-from .models import Question, Option, Vote
+from .models import Question, Option, Vote, CustomUser
 
 class OptionInline(admin.TabularInline):
     model = Option
@@ -26,3 +26,4 @@ class VoteAdmin(admin.ModelAdmin):
 
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Vote, VoteAdmin)
+admin.site.register(CustomUser)

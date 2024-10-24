@@ -11,6 +11,9 @@
     <h3>Template tag > É autor? {{ user|is_author }}</h3>
     <h3>User Property > É autor? {{ user.is_author }}</h3>
 
+    <h3>Template tag > Has group > Autor {{ user|has_group:"Autor" }}</h3>
+    <h3>Template tag > Has group > Foo {{ user|has_group:"Foo" }}</h3>
+
     <ul class="list-group mt-3">
         {% for question in object_list %}
             <li class="list-group-item"><a href="{% url 'question-detail' question.id %}">{{ question.text }}</a></li>

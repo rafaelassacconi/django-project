@@ -11,6 +11,7 @@ from .models import Question, Option, Vote
 
 class OptionInline(admin.TabularInline):
     model = Option
+    extra = 0
 
 class QuestionAdmin(admin.ModelAdmin):
      inlines = [OptionInline]

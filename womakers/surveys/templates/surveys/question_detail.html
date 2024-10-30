@@ -1,5 +1,6 @@
 {% extends "surveys/base.html" %}
 {% load django_bootstrap5 %}
+{% load user_permissions %}
 
 {% block content %}
     <h1>{{ question.text }}</h1>
@@ -12,9 +13,15 @@
                     <form method="post" action="{% url 'question-vote' question.id %}">
                         {% csrf_token %}
                         {% bootstrap_form form %}
+                        
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <button type="submit" class="btn btn-outline-primary">Votar</button>
+                            {% if user|has_group:"Votar" %}
+                                <button type="submit" class="btn btn-outline-primary">Votar</button>
+                            {% else %}
+                                <p>Sem permissão para votar.</p>
+                            {% endif %}
                         </div>
+                    
                     </form>
                 </div>
             </div>

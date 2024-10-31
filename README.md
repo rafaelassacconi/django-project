@@ -8,7 +8,7 @@
 - `cd django-project` - entra na pasta do projeto
 - `python -m venv .venv` - cria virtualenv
 - `source .venv/bin/activate` ou `.\.venv\Scripts\activate` - ativa virtualenv
-- `pip install Django` - instala Django
+- `pip install -r requirements.txt` - instala dependências
 - `cd womakers` - entra na pasta do sistema
 - `python manage.py migrate` - executa migrações
 - `python manage.py createsuperuser` - cria usuário do admin

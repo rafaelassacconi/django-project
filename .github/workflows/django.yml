@@ -27,4 +27,5 @@ jobs:
         pip install Django
     - name: Run Tests
       run: |
+        cd womakers
         python manage.py test
